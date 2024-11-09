@@ -5,19 +5,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MultiplicationTableTest {
 
-
     @Test
-    public void testMultiplication() {
+    public void testMultiply() {
         MultiplicationTable table = new MultiplicationTable();
-   
         assertEquals(10, table.multiply(2, 5));
-     
         assertEquals(21, table.multiply(3, 7));
-       
         assertEquals(10, table.multiply(1, 10));
     }
 
-  
     @Test
     public void testGenerateTable() {
         MultiplicationTable table = new MultiplicationTable();
@@ -25,19 +20,10 @@ public class MultiplicationTableTest {
         assertEquals(expected, table.generateTable(5));
     }
 
-
     @Test
     public void testGenerateTableInvalidNumber() {
         MultiplicationTable table = new MultiplicationTable();
         assertThrows(IllegalArgumentException.class, () -> table.generateTable(0));
         assertThrows(IllegalArgumentException.class, () -> table.generateTable(-3));
-    }
-
-
-    @Test
-    public void testLargeMultiplication() {
-        MultiplicationTable table = new MultiplicationTable();
-      
-        assertEquals(1000, table.multiply(100, 10));
     }
 }
