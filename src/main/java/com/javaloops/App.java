@@ -5,9 +5,8 @@ import java.util.Scanner;
 public class App {
 
     public static void main(String[] args) {
-        // Используем try-with-resources для автоматического закрытия scanner
         try (Scanner scanner = new Scanner(System.in)) {
-            System.out.print("Введите число для вывода таблицы умножения: ");
+            System.out.print("Enter a number to display the multiplication table: ");
             int n = scanner.nextInt();
             
             try {
