@@ -7,6 +7,7 @@ import java.util.List;
 
 public class MultiplicationTableTest {
 
+    // Test for the multiplication table of 5
     @Test
     public void testMultiplicationTableForFive() {
         List<String> result = MultiplicationTable.generateMultiplicationTable(5);
@@ -26,6 +27,7 @@ public class MultiplicationTableTest {
         assertEquals(expectedOutput, result);
     }
 
+    // Test for the multiplication table of 1
     @Test
     public void testMultiplicationTableForOne() {
         List<String> result = MultiplicationTable.generateMultiplicationTable(1);
@@ -45,6 +47,7 @@ public class MultiplicationTableTest {
         assertEquals(expectedOutput, result);
     }
 
+    // Test for the multiplication table of 10
     @Test
     public void testMultiplicationTableForTen() {
         List<String> result = MultiplicationTable.generateMultiplicationTable(10);
@@ -64,6 +67,7 @@ public class MultiplicationTableTest {
         assertEquals(expectedOutput, result);
     }
 
+    // Test for the multiplication table of 0
     @Test
     public void testMultiplicationTableForZero() {
         List<String> result = MultiplicationTable.generateMultiplicationTable(0);
@@ -79,6 +83,26 @@ public class MultiplicationTableTest {
         expectedOutput.add("0 x 8 = 0");
         expectedOutput.add("0 x 9 = 0");
         expectedOutput.add("0 x 10 = 0");
+
+        assertEquals(expectedOutput, result);
+    }
+
+    // Test for the multiplication table of negative number (-1)
+    @Test
+    public void testMultiplicationTableForNegativeOne() {
+        List<String> result = MultiplicationTable.generateMultiplicationTable(-1);
+
+        List<String> expectedOutput = new ArrayList<>();
+        expectedOutput.add("-1 x 1 = -1");
+        expectedOutput.add("-1 x 2 = -2");
+        expectedOutput.add("-1 x 3 = -3");
+        expectedOutput.add("-1 x 4 = -4");
+        expectedOutput.add("-1 x 5 = -5");
+        expectedOutput.add("-1 x 6 = -6");
+        expectedOutput.add("-1 x 7 = -7");
+        expectedOutput.add("-1 x 8 = -8");
+        expectedOutput.add("-1 x 9 = -9");
+        expectedOutput.add("-1 x 10 = -10");
 
         assertEquals(expectedOutput, result);
     }
