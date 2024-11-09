@@ -5,19 +5,19 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MultiplicationTableTest {
 
-    // Тест для проверки правильности умножения
+
     @Test
     public void testMultiplication() {
         MultiplicationTable table = new MultiplicationTable();
-        // Проверяем умножение 2 на 5
+   
         assertEquals(10, table.multiply(2, 5));
-        // Проверяем умножение 3 на 7
+     
         assertEquals(21, table.multiply(3, 7));
-        // Проверяем умножение 1 на 10
+       
         assertEquals(10, table.multiply(1, 10));
     }
 
-    // Тест для проверки выводов таблицы умножения
+  
     @Test
     public void testGenerateTable() {
         MultiplicationTable table = new MultiplicationTable();
@@ -25,7 +25,7 @@ public class MultiplicationTableTest {
         assertEquals(expected, table.generateTable(5));
     }
 
-    // Тест для проверки метода генерации таблицы умножения для некорректного числа (например, меньше 1)
+
     @Test
     public void testGenerateTableInvalidNumber() {
         MultiplicationTable table = new MultiplicationTable();
@@ -33,11 +33,11 @@ public class MultiplicationTableTest {
         assertThrows(IllegalArgumentException.class, () -> table.generateTable(-3));
     }
 
-    // Тест для проверки корректности вывода результата для большого числа
+
     @Test
     public void testLargeMultiplication() {
         MultiplicationTable table = new MultiplicationTable();
-        // Проверка умножения 100 на 10
+      
         assertEquals(1000, table.multiply(100, 10));
     }
 }
